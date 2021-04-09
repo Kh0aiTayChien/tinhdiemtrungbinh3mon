@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+    <style>
+        body {
+            background-color: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center"> Caculator </h1>
+    <table border="0">
+        <colgroup>
+            <col width="120">
+            <col width="120">
+            <col width="120">
+            <col width="120">
+            <col width="120">
+        </colgroup>
+        <tr>
+            <th> </th> <th> Nhập điểm Vật Lý</th> <th></th><th > Nhập điểm Hóa Học</th><th></th><th > Nhập điểm Sinh Học</th>
+        </tr>
+        <tr>
+        <th> </th><th> <input type="number" id="vatly"></th>
+        <th> </th><th> <input type="number" id="hoahoc"></th>
+        <th> </th><th> <input type="number" id="sinhhoc"></th>
+            <th><button onclick="tinhdiem()">Điểm Trung Bình 3 môn </button> </th>
+        </tr>
+        <tr></tr>
+        <tr>
+
+
+        </tr>
+        <tr>
+        <th></th><th></th> <th></th><th></th> <th></th><th></th>
+
+            <th id="xuatra"> </th>
+        </tr>
+    </table>
+    <script>
+        function tinhdiem() {
+            let V = +document.getElementById('vatly').value;
+            let H = +document.getElementById('hoahoc').value;
+            let S = +document.getElementById('sinhhoc').value;
+            let TB = ( V + H + S ) /3
+
+            document.getElementById('xuatra').innerText=('Số điểm của bạn là '+ TB );
+        }
+
+    </script>
+
+</body>
+</html>
